@@ -12,6 +12,7 @@
   "permissions": [
    "clipboardRead",
    "clipboardWrite",
+   "cookies",
    "sessions",
    "storage"
    ]
