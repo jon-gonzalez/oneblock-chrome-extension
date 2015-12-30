@@ -1,0 +1,30 @@
+html, body {
+    height: 480px;
+    width: 320px;
+}
+
+input[type="text"],input[type="password"] {
+	height: unset;
+}
+.center-qr {
+    width: 258px;
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+.red {
+	color: red;
+}
+#error-dialog, #error-dialog-phrase, #error-dialog-clipboard, #error-dialog-manual {
+	border: #ff9999 solid 1px;
+	background: #ffeeee;
+	color: red;
+}
+#success-dialog, #success-dialog-phrase, #success-dialog-clipboard, #success-dialog-manual {
+	border: #99dd99 solid 1px;
+	background: #eeffee;
+	color: green;
+}
+#button-delete {
+	color: black;
+}
