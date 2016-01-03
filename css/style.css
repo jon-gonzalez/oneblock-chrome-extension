@@ -6,25 +6,44 @@ html, body {
 input[type="text"],input[type="password"] {
 	height: unset;
 }
+.qr-wrapper {
+	width: 50%;
+	margin: 0 auto;
+}
+
 .center-qr {
-    width: 258px;
+	width: 258px;
   	display: block;
   	margin-left: auto;
   	margin-right: auto;
 }
+
 .red {
 	color: red;
 }
+
 #error-dialog, #error-dialog-phrase, #error-dialog-clipboard, #error-dialog-manual {
 	border: #ff9999 solid 1px;
 	background: #ffeeee;
 	color: red;
 }
+
 #success-dialog, #success-dialog-phrase, #success-dialog-clipboard, #success-dialog-manual {
 	border: #99dd99 solid 1px;
 	background: #eeffee;
 	color: green;
 }
+
 #button-delete {
 	color: black;
+}
+
+.title-image {
+	margin-bottom: -5px;	
+}
+
+ion-footer-bar .footer-title {
+	font-size: 10px;
+	font-style: italic;
+	text-align: center;
 }

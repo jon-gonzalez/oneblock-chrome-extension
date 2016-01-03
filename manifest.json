@@ -10,10 +10,7 @@
    "default_popup": "popup.html"
   },
   "permissions": [
-   "clipboardRead",
-   "clipboardWrite",
-   "cookies",
-   "sessions",
-   "storage"
+   "storage",
+   "background"
    ]
 }

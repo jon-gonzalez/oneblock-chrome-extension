@@ -1,82 +1,29 @@
-<ion-view view-title="1Block: Authenticate">
-
-<ion-tabs class="tabs-positive">
-
-    <ion-tab title="QR Code">
-      <ion-view>
-        <ion-content class="has-header" padding="true">
-          <div class="row">
-              <div class="col">
-                <div class="card text-center">ID: {{ $session.id.title }}</div>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col">
-                  <button class="button button-block ion-camera button-positive" ng-click="scan()">
-                      Scan QR Code
-                  </button>
-              </div>
-          </div>
-          <div id="login-buttons" class="hide text-center">
-            <div class="row">
-                <div class="col">
-                    <p>Logging into: <b>{{ login_url }}</b></p>
+<ion-view view-title='<img class="title-image" src="img/1block_22.png" /> 1Block: Authenticate'>
+    <ion-content class="has-header" padding="true">
+        <div class="row">
+            <div class="col">
+              <div class="card text-center">Manual</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="item item-input">
+                  <input type="text" placeholder="paste in signature challenge URL" ng-model="model.login_url" required>
+                </div>
+                <div id="success-dialog" class="hide text-center">
+                    <i class="icon ion-checkmark-circled"></i> <span id="success-text">Success!</span>
+                </div>
+                <div id="error-dialog" class="hide text-center">
+                    <i class="icon ion-alert-circled"></i> Error: <span id="error-text">Error!</span>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                  <button id="scan-confirm" class="button button-block ion-close-circled button-assertive" ng-click="cancelLogin()">
-                      CANCEL
-                  </button>
-                </div>
-                <div class="col">
-                  <button id="scan-confirm" class="button button-block ion-checkmark-circled button-balanced" ng-click="submitLogin()">
-                      CONTINUE
-                  </button>
-                </div>          
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="button button-block button-positive" ng-click="manual()">
+                    Submit URL
+                </button>
             </div>
-          </div>
-          <div id="success-dialog" class="hide text-center">
-              <i class="icon ion-checkmark-circled"></i> <span id="success-text">Success!</span>
-          </div>
-          <div id="error-dialog" class="hide text-center">
-              <i class="icon ion-alert-circled"></i> Error: <span id="error-text">Error!</span>
-          </div>
-        </ion-content>
-      </ion-view>
-    </ion-tab>
- 
-     <ion-tab title="Manual">
-        <ion-view>
-            <ion-content class="has-header" padding="true">
-                <div class="row">
-                    <div class="col">
-                      <div class="card text-center">Manual</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="item item-input">
-                          <input type="text" placeholder="paste in signature challenge URL" ng-model="model.login_url" required>
-                        </div>
-                        <div id="success-dialog" class="hide text-center">
-                            <i class="icon ion-checkmark-circled"></i> <span id="success-text">Success!</span>
-                        </div>
-                        <div id="error-dialog" class="hide text-center">
-                            <i class="icon ion-alert-circled"></i> Error: <span id="error-text">Error!</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <button class="button button-block button-positive" ng-click="manual()">
-                            Submit URL
-                        </button>
-                    </div>
-                </div>
-            </ion-content>
-        </ion-view>
-     </ion-tab>
- 
-</ion-tabs>
+        </div>
+    </ion-content>
 </ion-view>
